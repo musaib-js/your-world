@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} Your World | A Complete Real Estate Solution {% endblock title %}
+
+{% block homeactive %} active {% endblock homeactive %}
+{% load static %}
+
+{% block body %} 
+<section class="py-5 text-center container" style = "background: url('{% static 'img/imgserv.png'%}') center">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+      </div>
+    </div>
+  </section>
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for service in allServices  %}
+        <div class="col my-2">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="/media/{{service.serviceimg}}">
+            <div class="card-body">
+            <h4 class = "text-muted"> {{service.servicename}}</h4>
+              <p class="card-text">{{service.servicedesc | truncatechars:180 | safe}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href = "/{{service.slug}}/" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
+                </div>
+                <small class="text-muted">{{service.sno}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock body %}

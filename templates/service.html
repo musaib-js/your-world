@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Your World | A Complete Real Estate Solution {% endblock title %}
+
+{% block homeactive %} active {% endblock homeactive %}
+{% load static %}
+
+{% block body %} 
+
+<!--Post Container-->
+<div class="container my-4">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="blog-post-title">{{service.servicename}}</h2>
+          <p>{{service.servicedesc | safe}}</p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src= '/media/{{service.serviceimg}}'>
+        </img>
+
+      </div>
+    </div>
+</div>
+
+{% endblock body %}

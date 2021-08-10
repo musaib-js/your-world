@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Your World | A Complete Real Estate Solution {% endblock title %}
+
+{% block homeactive %} active {% endblock homeactive %}
+{% load static %}
+
+{% block body %} 
+
+<div class = "container my-4">
+<div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Your World Pvt. Ltd.</h1>
+        <p class="col-md-8 fs-4">Your World Pvt. Ltd. is a first of it's kind initiative by the Indian entrepreneur Wasif Rashid. It is a digital marketing based company established in 2016 and is providing services like Innovative Strategies for Public Relation Campaigns Industry Relations, Digital PR Public Relations, Media Relations, PR services, Crisis Management, Brokerage etc in and outside</p>
+       <a href = "/services" role = "button" type = "button" class="btn btn-primary btn-lg"> Services Offered</a>
+      </div>
+    </div>
+
+<div class="row align-items-md-stretch">
+      <div class="col-md-6 my-2">
+        <div class="h-100 p-5 text-white bg-dark rounded-3 my-2"  style="background: url({% static 'img/imgab.jpg' %}) center;">
+        <h2 class = "text-dark"> Let's Redefine Digital Marketing </h2>
+        <h3 class = "text-dark">Come to Your World and feel like your own world. We promise you will :)</h3>
+        </div>
+      </div>
+      <div class="col-md-6 my-2">
+        <div class="h-100 p-5 bg-light border rounded-3 my-2">
+          <h2>What do we do?</h2>
+          <p>Magic. Yes, you heard it right. The thing that you buy at Rs 1000 is provided to you at something below Rs 1000. Wherever you feel intricacies in selling your products, we'll clear the way. It's not e-commerce, it's digital marketing. We'll connect you to the world and promote you to the skies and we promise it.</p>
+          <a href = "/services" role = "button" type = "button" class="btn btn-outline-secondary"> Services Offered</a>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Schedule A Call | Your World {% endblock title %}
+
+
+{% block body %} 
+
+<!-- Call Form -->
+    <div class="container my-4">
+        <form action="/contact/" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input name="name" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                <input name="phone" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter your phone">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Concern</label>
+                <input name="concern" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Why do you want to contact us?">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Elaborate Your Concern</label>
+                <textarea name="details" class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+            </div>
+            {% csrf_token %}
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+    </div>
+ 
+{% endblock body %}

@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %} Your World | A Complete Real Estate Solution {% endblock title %}
+
+{% block homeactive %} active {% endblock homeactive %}
+
+{% block body %} 
+
+{% load static %}
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="{% static 'img/imgthree.jpg' %}" alt="My image" class="d-block w-100" style = "height: 400px; width 600px;">
+    </div>
+    <div class="carousel-item">
+     <img src="{% static 'img/imgsix.jpg' %}" alt="My image" class="d-block w-100" style = "height: 400px; width 600px;">
+    </div>
+    <div class="carousel-item">
+     <img src="{% static 'img/imgtwo.jpg' %}" alt="My image" class="d-block w-100" style = "height: 400px; width 600px;">
+    </div>
+  </div>
+</div>
+
+
+<div class="b-example-divider"></div>
+<div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Popular Services Offered</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col my-2">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: url('{% static 'img/imgfive.jpg' %}') center;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">We Define the Actual Tech</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="{% static 'img/imgfour.jpg' %}" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small>Digital Marketing</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small></small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col my-2">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: url({% static 'img/imgsix.jpg' %});">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">We Connect You to the World</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="{% static 'img/imgsix.jpg' %}" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small class = "text-dark">We Connect You</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small></small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col my-2">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: url('/static/img/imgseven.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-dark">We Promote You To The Skies</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="{% static 'img/imgseven.jpg'%}" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small class = "text-dark">Promotion</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small></small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class = "container">
+<hr class="featurette-divider">
+<div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Ted Rubin <span class="text-muted">Once Said</span></h2>
+        <p class="lead">“When people ask me what’s the ROI of Social, I ask them… what’s the ROI of Trust, and what’s the ROI of Loyalty. The answer, when used to build relationships the results will be… longer lifetime value of a customer, larger average order value, and increased frequency of purchase. All measurable and all lead to increased sales and profits.” </p>
+        <p class="lead text-muted"> We live in the age of technology, the tech-age. So, we are supposed to live actually in the tech-age, where nothing, but tech defines our existence. </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src = "{% static 'img/imgeight.jpg' %}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="300">
+
+      </div>
+</div>
+<hr class="featurette-divider">
+</div>
+
+{% endblock body %}
